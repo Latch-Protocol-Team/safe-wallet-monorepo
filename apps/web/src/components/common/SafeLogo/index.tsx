@@ -3,12 +3,13 @@ import Link from 'next/link'
 import { AppRoutes } from '@/config/routes'
 import { cn } from '@/utils/cn'
 import css from './SafeLogo.module.css'
+import { BRAND_NAME } from '@/config/constants'
 
 const LogoMark = (): ReactElement => (
   <>
     <img
       src="/images/logo-no-text.svg"
-      alt="Safe"
+      alt={BRAND_NAME}
       width={24}
       height={24}
       className="size-6 group-data-[collapsible=icon]:size-4.5 dark:hidden"

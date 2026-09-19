@@ -18,8 +18,8 @@ const lightPalette: ColorPalette = {
   },
   secondary: {
     dark: '#0FDA6D',
-    main: '#12FF80',
-    light: '#B0FFC9',
+    main: '#6B8DFF',
+    light: '#C7D3FF',
     background: '#EFFFF4',
   },
   border: {
@@ -87,7 +87,7 @@ const lightPalette: ColorPalette = {
     light: '#636669',
     primary: '#FFFFFF',
     textSecondary: '#A1A3A7',
-    textBrand: '#12FF80',
+    textBrand: '#6B8DFF',
   },
 }
 

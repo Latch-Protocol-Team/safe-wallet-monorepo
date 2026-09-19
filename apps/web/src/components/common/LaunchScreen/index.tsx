@@ -1,10 +1,11 @@
 import { useEffect, useState, type ReactElement } from 'react'
+import { BRAND_NAME } from '@/config/constants'
 import { cn } from '@/utils/cn'
 import { useLaunchScreen } from './useLaunchScreen'
 import css from './LaunchScreen.module.css'
 
 const LAUNCH_STEPS = [
-  { progress: 30, caption: 'Loading Safe{Wallet}…' },
+  { progress: 30, caption: `Loading ${BRAND_NAME}…` },
   { progress: 65, caption: 'Fetching your accounts…' },
   { progress: 90, caption: 'Almost there…' },
 ] as const
@@ -49,7 +50,7 @@ function LaunchScreen({ stepUpCaption }: { stepUpCaption?: string }): ReactEleme
       role="status"
       aria-busy={!exiting}
       aria-live="polite"
-      aria-label={stepUpCaption ?? 'Loading Safe{Wallet}'}
+      aria-label={stepUpCaption ?? `Loading ${BRAND_NAME}`}
       data-testid="launch-screen"
       className={cn(
         'fixed inset-0 z-[1401] flex flex-col items-center justify-center gap-8 bg-background transition-opacity duration-300',
@@ -59,7 +60,7 @@ function LaunchScreen({ stepUpCaption }: { stepUpCaption?: string }): ReactEleme
       <div className="relative flex items-center justify-center">
         <span aria-hidden className={cn('absolute size-40 rounded-full', css.halo)} />
         <div className={css.breathe}>
-          <img src="/images/logo-no-text.svg" alt="Safe" width={72} height={72} className="size-[72px] dark:hidden" />
+          <img src="/images/logo-no-text.svg" alt={BRAND_NAME} width={72} height={72} className="size-[72px] dark:hidden" />
           <span aria-hidden className={cn('hidden size-[72px] dark:block', css.logoDarkFill)} />
         </div>
       </div>
